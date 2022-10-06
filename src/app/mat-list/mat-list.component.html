@@ -1,0 +1,47 @@
+<!-- import { MatListModule } from '@angular/material/list';  -->
+<!-- import { MatIconModule } from '@angular/material/icon'; -->
+<!-- import { MatButtonModule } from '@angular/material/button'; -->
+
+<!-- import { MatSelectionListChange } from '@angular/material/list'; -->
+
+<h2 style="text-align:center; font-size: 25px; color: brown;" >Angular Material List Example</h2>
+
+<mat-nav-list>
+    <a mat-list-item href="https://www.concretepage.com/java/java-8/" > Java </a>
+    <a mat-list-item href="https://www.concretepage.com/angular/" > Angular </a>
+  </mat-nav-list> 
+  
+  
+  <h3>mat-list and mat-list-item</h3>
+<mat-list>
+  <mat-list-item>Suresh</mat-list-item>
+  <mat-list-item>Mahesh</mat-list-item>
+  <mat-list-item>Krishna</mat-list-item>
+</mat-list>
+<h3>mat-nav-list and mat-list-item</h3>
+<mat-nav-list>
+  <a mat-list-item href="https://www.indiatoday.in/livetv" > 
+    <mat-icon>live_tv</mat-icon>
+  </a>
+  <a mat-list-item href="https://www.youtube.com" > 
+    <mat-icon  style="color:rgb(59, 21, 9) ;">subscriptions</mat-icon> 
+  </a>
+  <!-- <a mat-list-item href="https://myactivity.google.com/myactivity?pli=1" > 
+    <mat-icon>history</mat-icon>
+  </a> -->
+  <a mat-list-item href="https://translate.google.co.in/" > 
+    <mat-icon>translate</mat-icon>
+  </a>
+  
+
+</mat-nav-list>
+<h3>mat-selection-list and mat-list-option</h3>
+<form [formGroup]="techForm" (ngSubmit)="onFormSubmit()">
+  <mat-selection-list formControlName="selectedTech">
+    <mat-list-option *ngFor="let tech of techList" [value]="tech">
+      {{tech.lang}}
+    </mat-list-option>
+  </mat-selection-list>
+  <button mat-raised-button color="warn">Submit</button>
+</form> 
+

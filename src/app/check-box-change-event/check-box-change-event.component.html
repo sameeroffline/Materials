@@ -1,0 +1,30 @@
+<!-- import { MatCheckboxModule } from '@angular/material/checkbox'; -->
+ 
+    
+<h2 style="text-align:center; font-size: 25px; color: brown;" >Angular Material Checkbox Change Event</h2>
+
+<h3>change</h3>
+<section>
+  <mat-checkbox [formControl]="item" (change)="onChangeDemo($event)"> Item </mat-checkbox>
+</section>
+
+<h3>indeterminateChange</h3>
+<mat-checkbox [formControl]="allItems"
+ (change)="onChkChange($event)"
+ [indeterminate]="isIndeterminate"
+ (indeterminateChange)="onIndeterminateChange($event)" > 
+    All Items 
+</mat-checkbox>
+<ul>
+    <li>
+        <mat-checkbox [formControl]="item1" (change)="onChkChildChange($event)"> Item 1 </mat-checkbox>
+    </li>
+    <li>
+        <mat-checkbox [formControl]="item2" (change)="onChkChildChange($event)"> Item 2 </mat-checkbox>
+    </li>
+    <li>
+        <mat-checkbox [formControl]="item3" (change)="onChkChildChange($event)"> Item 3 </mat-checkbox>
+    </li>
+</ul> 
+
+ 

@@ -1,0 +1,22 @@
+<h2 style="text-align:center; font-size: 25px; color: brown;" >Angular Material List with Checkbox</h2>
+
+
+
+<h3>Material List</h3>
+<mat-selection-list color="primary" (selectionChange)="onListSelectionChange($event)">
+  <mat-list-option>Coimbatore</mat-list-option>
+  <mat-list-option [selected]="isSelected">Ooty</mat-list-option>
+  <mat-list-option disabled="true">salem</mat-list-option>
+  <mat-list-option>kanyakumari</mat-list-option>
+</mat-selection-list>
+
+<h3>Material List with Reactive Form</h3>
+<form [formGroup]="techForm" (ngSubmit)="onFormSubmit()">
+  <mat-selection-list formControlName="selectedTech">
+    <mat-list-option *ngFor="let tech of techList" [value]="tech">
+      {{tech.lang}}
+    </mat-list-option>
+  </mat-selection-list>
+  <button mat-raised-button color="warn">Submit</button>
+</form> 
+

@@ -1,0 +1,42 @@
+<h2 style="text-align:center; font-size: 25px; color: brown;" >Angular Material mat-checkbox</h2>
+
+<h3>checked</h3>
+<mat-checkbox [checked]="isChkChecked"> xyz </mat-checkbox>
+
+<h3>disableRipple</h3>
+<mat-checkbox [disableRipple]="isRippleDisabled"> xyz </mat-checkbox>
+
+<h3>disabled</h3>
+<mat-checkbox [disabled]="isDisabled"> xyz </mat-checkbox>
+
+<h3>indeterminate</h3>
+<mat-checkbox [indeterminate]="isChkIndeterminate"> xyz </mat-checkbox>
+
+<h3>labelPosition and color</h3>
+<ul>
+  <li>
+    <mat-checkbox labelPosition="before" color="primary"> abc </mat-checkbox>
+  </li>
+  <li>
+    <mat-checkbox labelPosition="after" color="warn"> xyz </mat-checkbox>
+  </li>
+</ul>
+
+<h3>change Event</h3>
+<mat-checkbox (change)="onChange($event)"> abc </mat-checkbox>
+
+<h3>indeterminateChange Event</h3>
+<mat-checkbox [indeterminate]="isIndeterminate" [checked]="allChecked"
+  (indeterminateChange)="onIndeterminateChange($event)" (change)="onChkChange($event)">
+  City
+</mat-checkbox>
+<ul>
+  <li>
+    <mat-checkbox (change)="onChildChkChange($event)" [(ngModel)]="vns"> Varanasi </mat-checkbox>
+  </li>
+  <li>
+    <mat-checkbox (change)="onChildChkChange($event)" [(ngModel)]="svk"> Sivakasi </mat-checkbox>
+  </li>
+</ul> 
+
+
